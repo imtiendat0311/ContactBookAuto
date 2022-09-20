@@ -11,9 +11,9 @@ def autofill():
     userId = "itunesvnpaid@gmail.com"
     password = "mrdat123a"
     cwd = os.getcwd()
-    b = "/chromem1" if a==2 else "/chromedriver.exe"
+    b = "/chromem1" if int(a)==2 else "/chromedriver.exe"
     #need chromedriver for your current chrome version
-    browser = webdriver.Chrome(cwd+"/chromem1")
+    browser = webdriver.Chrome(cwd+b)
     
     URL = "https://app.contractbook.com/drafter/Esoft/freelancer-contract-7139e0f0?answersSetId=7bc020af-9782-4a6a-ac14-fe74f52a2445&step=0&source=Esoft"
     browser.get(URL)
