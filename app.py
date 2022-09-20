@@ -5,7 +5,7 @@ import random
 import os
 
 
-def commentspam():
+def autofill():
     a = input("What platform are u using\n input 1 for windows 2 for macos: ")
     #your credentials here
     userId = "itunesvnpaid@gmail.com"
@@ -113,6 +113,6 @@ def commentspam():
 
 # cmt = ["up"]
 # call method ( how many repeate comment, how long of the delay comment, list of post )
-commentspam()
+autofill()
 
 print("finish")
