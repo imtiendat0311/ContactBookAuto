@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 import random
 import os
-
+import pandas as pd
 
 def autofill():
     a = input("What platform are u using\n input 1 for windows 2 for macos: ")
@@ -100,7 +100,7 @@ def autofill():
 # # list of post need to comment
 # postUrl=["https://m.facebook.com/groups/1344873668901428/permalink/5170024369719653/",
 #          "https://m.facebook.com/groups/330966831016688/permalink/1157555105024519/",
-#         #  "https://m.facebook.com/groups/vieclamquanbinhtan/permalink/5146164988765265/",
+#         #  "https://m.facebook.com/groups/vieclamquanbinhtan/permalink/5146164988765265/", 
 #          "https://m.facebook.com/groups/danbinhchanhnew/permalink/5067636606646783/",
 #         # "https://m.facebook.com/groups/377156329334346/permalink/1611130729270227/",
 #         "https://m.facebook.com/groups/pgpbkhuvucmienbac/permalink/425006882503944/",
@@ -113,6 +113,19 @@ def autofill():
 
 # cmt = ["up"]
 # call method ( how many repeate comment, how long of the delay comment, list of post )
-autofill()
+# autofill()
 
+excel= pd.read_excel("/Users/boo/Downloads/Contract-Linh.xlsx",sheet_name='Sheet2',header=None)
+c=[1,3]
+for i in excel.values:
+    b=[]
+print(excel.values[0][10])
 print("finish")
+
+# name 1 
+# dob 3 
+# passport 7
+# date issue 8
+# place issue 10
+
+
