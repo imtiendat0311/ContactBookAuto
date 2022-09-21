@@ -119,7 +119,7 @@ excel= pd.read_excel("/Users/boo/Downloads/Contract-Linh.xlsx",sheet_name='Sheet
 c=[1,3]
 for i in excel.values:
     b=[]
-print(excel.values[0][10])
+print(excel.values[0][27])
 print("finish")
 
 # name 1 
@@ -127,5 +127,10 @@ print("finish")
 # passport 7
 # date issue 8
 # place issue 10
-
-
+# address 11
+# email 14
+# contract date ?? 20
+# bank number 27
+# bank name 28
+# bank address 29
+# swift code 30
