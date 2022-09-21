@@ -5,21 +5,22 @@ import random
 import os
 import pandas as pd
 
-def autofill():
+def autofill(d):
     a = input("What platform are u using\n input 1 for windows 2 for macos: ")
     #your credentials here
-    userId = "itunesvnpaid@gmail.com"
-    password = "mrdat123a"
+   
     cwd = os.getcwd()
     b = "/chromem1" if int(a)==2 else "/chromedriver.exe"
     #need chromedriver for your current chrome version
     browser = webdriver.Chrome(cwd+b)
     
-    URL = "https://app.contractbook.com/drafter/Esoft/freelancer-contract-7139e0f0?answersSetId=7bc020af-9782-4a6a-ac14-fe74f52a2445&step=0&source=Esoft"
+    URL = d[len(d)-1] # link url nho de o cuoi
     browser.get(URL)
     time.sleep(5)
-    startButton =  browser.find_element(By.XPATH,'//button[normalize-space()="Start"]')
-    startButton.click()
+    cookButton = browser.find_element(By.ID,'lm-accept-necessary')
+    cookButton.click()
+    # startButton =  browser.find_element(By.XPATH,'//button[normalize-space()="Start"]')
+    # startButton.click()
     time.sleep(5)
     listID = ['fullName','country','address','nationality','region','dateOfBirth',
     'passportOrNationalIdNumber','issuedDateAndUssuedPlaceOfPassportid',
@@ -38,10 +39,11 @@ def autofill():
     # inputSwift = browser.find_element(By.ID,'swiftCode')
     # inputEmail = browser.find_element(By.ID,'email')
     listField =[]
-    for i in listID:
-        listField.append(browser.find_element(By.ID,i))
-    browser.execute_script("browser.find_element(By.ID,'email').scrollIntoView();",browser.find_element(By.ID,'email'))
-    browser.find_element(By.ID,'email').send_keys("dat@gmail.com")
+    for i in range(3):
+        a=browser.find_element(By.ID,listID[i])
+        a.send_keys(d[i])
+    # browser.execute_script("browser.find_element(By.ID,'email').scrollIntoView();",browser.find_element(By.ID,'email'))
+    # browser.find_element(By.ID,'email').send_keys("dat@gmail.com")
     # for i in listField:
     #     i.send_keys("a")
     #     time.sleep(2)
@@ -115,14 +117,17 @@ def autofill():
 # call method ( how many repeate comment, how long of the delay comment, list of post )
 # autofill()
 
-excel= pd.read_excel("/Users/boo/Downloads/Contract-Linh.xlsx",sheet_name='Sheet2',header=None)
-c=[1,3]
+excel= pd.read_excel("D:\Esoft\Contract - Linh.xlsx",sheet_name='Sheet1')
+# list chua vi tri o A=0 B=1 .... ok a
+c=[0,3,5,10,11,14]
 for i in excel.values:
     b=[]
-print(excel.values[0][27])
+    for j in c:
+        b.append(i[j])
+    autofill(b)
 print("finish")
 
-# name 1 
+# name 0 
 # dob 3 
 # passport 7
 # date issue 8
