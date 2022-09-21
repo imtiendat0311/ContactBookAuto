@@ -6,22 +6,22 @@ import os
 import pandas as pd
 
 def autofill(d):
-    a = input("What platform are u using\n input 1 for windows 2 for macos: ")
+   
     #your credentials here
    
     cwd = os.getcwd()
-    b = "/chromem1" if int(a)==2 else "/chromedriver.exe"
+    b = "/chromem1"
     #need chromedriver for your current chrome version
     browser = webdriver.Chrome(cwd+b)
-    
-    URL = d[len(d)-1] # link url nho de o cuoi
+    URL="https://app.contractbook.com/drafter/Esoft/freelancer-contract-7139e0f0?answersSetId=7bc020af-9782-4a6a-ac14-fe74f52a2445&step=0&source=Esoft"
+    # URL = d[len(d)-1] # link url nho de o cuoi
     browser.get(URL)
     time.sleep(5)
-    cookButton = browser.find_element(By.ID,'lm-accept-necessary')
-    cookButton.click()
+    # cookButton = browser.find_element(By.ID,'lm-accept-necessary')
+    # cookButton.click()
     # startButton =  browser.find_element(By.XPATH,'//button[normalize-space()="Start"]')
     # startButton.click()
-    time.sleep(5)
+    # time.sleep(5)
     listID = ['fullName','country','address','nationality','region','dateOfBirth',
     'passportOrNationalIdNumber','issuedDateAndUssuedPlaceOfPassportid',
     'accountNumber','bankName','bankAddress','swiftCode','email']
@@ -116,8 +116,8 @@ def autofill(d):
 # cmt = ["up"]
 # call method ( how many repeate comment, how long of the delay comment, list of post )
 # autofill()
-
-excel= pd.read_excel("D:\Esoft\Contract - Linh.xlsx",sheet_name='Sheet1')
+cwd = os.getcwd()
+excel= pd.read_excel("/Users/boo/Desktop/ContactBookAuto/Contract-Linh.xlsx",sheet_name='Sheet2')
 # list chua vi tri o A=0 B=1 .... ok a
 c=[0,3,5,10,11,14]
 for i in excel.values:
