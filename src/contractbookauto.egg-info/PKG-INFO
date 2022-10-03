@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: contractbookauto
+Version: 0
+Summary: UNKNOWN
+Home-page: https://github.com/imtiendat0311/ContactBookAuto/
+Author: Dat Nguyen
+Author-email: datnguyentien0311@gmail.com
+License: MIT
+Keywords: contractbook auto
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+

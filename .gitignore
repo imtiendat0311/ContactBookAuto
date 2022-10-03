@@ -1,1 +1,4 @@
 .DS_Store
+setup.py
+setup.cfg
+dist

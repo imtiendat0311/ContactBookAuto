@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/contractbookauto.egg-info/PKG-INFO
+src/contractbookauto.egg-info/SOURCES.txt
+src/contractbookauto.egg-info/dependency_links.txt
+src/contractbookauto.egg-info/requires.txt
+src/contractbookauto.egg-info/top_level.txt
