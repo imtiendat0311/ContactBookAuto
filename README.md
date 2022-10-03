@@ -26,3 +26,12 @@ We dont have once sorry
 
 You have to figure it out by yourself
 
+# Contributor:
+
+## Dat Nguyen [Author & macOS Testing]
+ - <https://github.com/imtiendat0311>
+
+## Vu Khanh Linh [Windows Testing]
+ - <https://github.com/khanhlinhtom2511>
+
+
