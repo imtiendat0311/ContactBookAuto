@@ -7,7 +7,7 @@
     <a href="https://github.com/imtiendat0311/ContactBookAuto/blob/main/LICENSE">
       <img src="https://img.shields.io/github/license/imtiendat0311/ContactBookAuto" alt="GPL-3.0"/>
     <a href="https://pypi.org/project/pls/">
-      <img src="https://img.shields.io/static/v1?label=supported%20OS&message=macOS,%20Windows,%20linux,&color=informational" alt="Platforms"/>
+      <img src="https://img.shields.io/static/v1?label=supported%20OS&message=macOS,%20Windows,%20linux&color=informational" alt="Platforms"/>
     </a>
 
 
