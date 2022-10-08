@@ -9,7 +9,6 @@ from selenium.common.exceptions import TimeoutException
 import pandas as pd
 
 def getSign():
-   
     option = Options()
     option.add_argument('user-data-dir=/Users/boo/Library/Application Support/Google/Chrome')
     option.add_argument('--profile-directory=Profile 1')
@@ -21,7 +20,6 @@ def getSign():
     c = browser.find_element(By.XPATH,'//*[@id="documents-page"]/div[2]/div/div[1]/div[2]/div[2]/button[4]/span/div/span/span').text[1:-1]
     b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
     i=0
-    #
     while len(b)/2<int(c):
         try:
             b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
@@ -36,7 +34,6 @@ def getSign():
             i=i+1
         except TimeoutException:
             break
-
     b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
     print("Actual number of available signed contract "+c)
     print("Number of signed contract can find "+str(len(b)/2))
@@ -52,13 +49,3 @@ def getSign():
 
 getSign()
 
-# //*[@id="documents-list"]/div[1]
-# //*[@id="documents-list"]/div[26]
-# //*[@id="documents-list"]/div[51]
-
-# //*[@id="documents-list"]/div[26]/button
-# //*[@id="documents-list"]/div[51]/button
-# //*[@id="documents-list"]/div[76]/button
-
-#//*[@id="documents-list"]/div[26]/button
-#//*[@id="documents-list"]/div[76]/button/span
