@@ -20,7 +20,7 @@ def getSign():
     c = browser.find_element(By.XPATH,'//*[@id="documents-page"]/div[2]/div/div[1]/div[2]/div[2]/button[4]/span/div/span/span').text[1:-1]
     b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
     i=0
-    while i<2:
+    while len(b)/2<int(c):
         try:
             b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
             if(len(b)/2==int(c)):

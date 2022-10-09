@@ -27,7 +27,7 @@ def getInfo():
        a.send_keys(Keys.DELETE)
        a.send_keys(i[2])
        a.send_keys(Keys.ENTER)
-       time.sleep(0.5)
+       time.sleep(1)
        if len(browser.find_elements(By.XPATH,"//*[@class='no-data']"))==1:
             for j in range(7):
                 listElement[j].append("No data")
