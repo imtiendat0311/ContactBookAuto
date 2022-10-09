@@ -20,7 +20,7 @@ def getSign():
     c = browser.find_element(By.XPATH,'//*[@id="documents-page"]/div[2]/div/div[1]/div[2]/div[2]/button[4]/span/div/span/span').text[1:-1]
     b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
     i=0
-    while len(b)/2<int(c):
+    while i<2:
         try:
             b = browser.find_elements(By.XPATH,'//*[local-name()="svg"][@class="icon--euAXU iconSuccess--+P3Qj"]')
             if(len(b)/2==int(c)):
@@ -39,11 +39,10 @@ def getSign():
     print("Number of signed contract can find "+str(len(b)/2))
     f={'Sign Status':[],'Sign Date':[],'Email':[]}
     for i in range(len(b)):
-        if i%2!=0:
-            f['Sign Status'].append(b[i].get_attribute("data-tip")[0:6])
-            f['Sign Date'].append(b[i].get_attribute("data-tip")[7:])
-            f['Email'].append(b[i].get_attribute("data-for")[7:])
-            # f.append([b[i].get_attribute("data-tip")[0:6],b[i].get_attribute("data-tip")[7:],b[i].get_attribute("data-for")[7:]])
+        if i%2==0:
+            f['Sign Status'].append(b[-1-i].get_attribute("data-tip")[0:6])
+            f['Sign Date'].append(b[-1-i].get_attribute("data-tip")[7:])
+            f['Email'].append(b[-1-i].get_attribute("data-for")[7:])
     df = pd.DataFrame(f, columns = ['Sign Status', 'Sign Date','Email'])
     df.to_excel(r'/Users/boo/Desktop/testing.xlsx',index = False, header=True)
 
